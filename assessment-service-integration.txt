@@ -1,0 +1,29 @@
+What options do we have to establish such communication?
+1) HTTP call
+2) Socket
+3) Messaging Queues
+
+For each option describe what are the pros and cons of this solution?
+1) HTTP call
+    - Easiest
+    - But hard to maintain incrementals changes
+    - Speed is lowest [handshaking and request-response]
+    - Good for budget client - who doesn't want to burn extra cash on infra
+2) Socket
+    - 2nd best solution
+    - Faster than HTTP calls
+    - Eat up system resources
+    - Easy to maintain
+    - Best for Realtime applications, games and financials services etc...
+    - Horizontal Scaling, load balancing is possible through third party tools like NginX and HAProxy etc...
+3) Messaging Queues
+    - One of the best solutions [Kafka, Rabbitmq etc...]
+    - One of fastest and widely used
+    - Horizontal Scaling, Cluster, Failover everything is out of box and simple
+    - Pipeline and Streams are best feature avaliable in kafka if your looking for data-lake, warehouse etc...
+    
+
+For each option describe what are the cases the solution fits best?
+1) HTTP - Good for budget client
+2) Socket - Realtime applications
+3) Messaging Queue - Almost everything for microservice [Realtime, AI, Ecommerce and Event based things]
